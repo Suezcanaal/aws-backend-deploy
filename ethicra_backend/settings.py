@@ -25,8 +25,19 @@ SECRET_KEY = 'django-insecure-p0@6$nsdpc)ctjmtzpn=5(#%5h1@k1e4xagcfqcl!7&+v-kj0&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = []
 
+=======
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['16.171.16.5', 'ethicra.vercel.app']  # Your EC2 public IP or domain
+
+CORS_ALLOWED_ORIGINS = [
+    "https://ethicra.vercel.app",
+    "http://16.171.16.5",
+    "http://localhost:3000",
+]
+>>>>>>> 46ca081 (Initial commit with project files)
 
 # Application definition
 
@@ -57,9 +68,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+<<<<<<< HEAD
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
+=======
+
+>>>>>>> 46ca081 (Initial commit with project files)
 ROOT_URLCONF = 'ethicra_backend.urls'
 
 TEMPLATES = [
@@ -130,9 +145,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
+<<<<<<< HEAD
 STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+=======
+#STATIC_URL = 'static/'
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+# Maximum file upload size (e.g., 500 MB)
+DATA_UPLOAD_MAX_MEMORY_SIZE = 524288000  # 500 * 1024 * 1024
+FILE_UPLOAD_MAX_MEMORY_SIZE = 524288000
+>>>>>>> 46ca081 (Initial commit with project files)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
